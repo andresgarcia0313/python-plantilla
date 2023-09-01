@@ -31,7 +31,7 @@ class TextPrinter:
         print(formatted_text)
 
 
-TEXT_TO_PRINT = "¡Hola, este es un texto con formato!"
+TEXT_TO_PRINT = "¡Hola, este es un texto!"
 # Crear una variable de tipo TextPrinter con sus funciones o metodos
 obj = TextPrinter(TEXT_TO_PRINT)
 # Imprimir el texto en pantalla con formato

@@ -51,7 +51,7 @@ Ejemplo en Símbolo de sistema y Bash
 pip install colorama&&pip freeze > requirements.txt
 
 ### Ejecuta el proyecto con
-python program.py
+python .\src\program.py
 
 ### Actualizar Dependencias
 
@@ -88,6 +88,18 @@ Si deseas contribuir a este proyecto, sigue estas directrices:
 - Crea una rama nueva para tu contribución: git checkout -b nombre-de-la-rama-para-la-funcionalidad.
 - Realiza tus cambios y asegúrate de seguir las pautas de estilo y buenas prácticas.
 - Envía una solicitud de extracción (pull request) a la rama principal del repositorio original para revisar tus cambios.
+## Construir imagen docker 
+Ejecuta el siguiente comando para construir la imagen Docker:
+
+docker build -f Containerfile -t app:1.0 .
+
+-t app:1.0 le da un nombre y una etiqueta a tu imagen. Puedes cambiar mi-aplicacion al nombre que prefieras y 1.0 a la versión que desees.
+El último punto . indica que Docker debe buscar el Dockerfile en el directorio actual.
+
+## Ejecuta el contenedor 
+
+Puedes hacer a partir de la imagen construida usando el siguiente.
+docker run --rm app:1.0
 
 ## Licencia
 Este proyecto se distribuye bajo licencias. Solicita una licencia para obtener más detalles.

@@ -6,5 +6,7 @@ services:
       dockerfile: Containerfile
     volumes:
       - ./src:/app/src
+    # command mantendrá el contenedor en ejecución y no se cerrará después de que se inicie
     command: tail -f /dev/null
+    # docker-compose exec app python src/program.py
 

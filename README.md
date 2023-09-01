@@ -105,6 +105,37 @@ docker run --rm app:1.0
 docker-compose up -d
 Con esto lo ejecutarias siempre y cuando el contenedor se llame app
 docker-compose exec app python src/program.py
+
+
+## Docker swarm
+Iniciar docker swarm
+    docker swarm init
+y almacena el token en algún lado seguro
+
+Ejecutalo con 
+docker stack deploy -c docker-compose.yml mi-aplicacion
+
+
+Verificar estado de la app
+
+docker service ls
+
+Escalar 
+
+docker service scale mi-aplicacion_miservicio=3
+
+Para realizar actualizaciones o cambios en tu aplicación, modifica tu archivo docker-compose.yml y luego actualiza la pila de servicios con:
+
+docker stack deploy -c docker-compose.yml mi-aplicacion
+
+## Monitoreo y mantenimiento:
+
+Puedes utilizar herramientas de monitoreo como Prometheus y Grafana para supervisar el rendimiento de tu aplicación en el clúster Swarm y realizar mantenimiento cuando sea necesario.
+
+## Ver repositorio de codigo git remoto actual
+
+git remote -v
+
 ## Licencia
 Este proyecto se distribuye bajo licencias. Solicita una licencia para obtener más detalles.
 

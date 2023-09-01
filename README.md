@@ -101,6 +101,10 @@ El último punto . indica que Docker debe buscar el Dockerfile en el directorio 
 Puedes hacer a partir de la imagen construida usando el siguiente.
 docker run --rm app:1.0
 
+## Ejecutar compose para no instalar la carpeta env y que solo este dentro de los contenedores
+docker-compose up -d
+Con esto lo ejecutarias siempre y cuando el contenedor se llame app
+docker-compose exec app python src/program.py
 ## Licencia
 Este proyecto se distribuye bajo licencias. Solicita una licencia para obtener más detalles.
 

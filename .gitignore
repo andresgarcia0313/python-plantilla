@@ -23,3 +23,5 @@ __pycache__/
 bin/
 include/
 token swarm
+program/app/src/scripts/file_contents.txt
+program/app/src/scripts/folders_and_files.txt

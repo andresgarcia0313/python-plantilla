@@ -1,6 +1,0 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: nombre-de-tu-aplicacion-config
-data:
-  # Agrega tus configuraciones aquí

@@ -51,35 +51,42 @@ Ejemplo en Símbolo de sistema y Bash
 pip install colorama&&pip freeze > requirements.txt
 
 ### Ejecuta el proyecto con
-python .\src\program.py
+python .\app\program.py
 
 ### Actualizar Dependencias
 
 Es importante mantener tus dependencias actualizadas para beneficiarte de las últimas mejoras y correcciones de seguridad. Agrega esta sección para mostrar cómo actualizar las dependencias en tu entorno virtual:
 
-## Actualizar todas las dependencias a las últimas versiones
 pip install -U -r requirements.txt
 
 ### Desactivar el entorno virtual
-## Para desactivar el entorno virtual y volver al entorno base de Python:
+
 deactivate
 
 ### Estructura del proyecto
 La estructura de archivos y directorios del proyecto es la siguiente:
-
-├── .gitignore
-├── program.py
-├── README.md
-├── requirements.txt
-└── .vscode
-    └── launch.json
-
 
 - `.gitignore`: Archivo que especifica los archivos y directorios que deben ignorarse en el control de versiones Git.
 - `program.py`: Archivo principal de la aplicación.
 - `README.md`: Archivo que proporciona información detallada sobre el proyecto.
 - `requirements.txt`: Archivo que enumera las dependencias principales del proyecto.
 - `.vscode/launch.json`: Archivo de configuración de depuración para archivos activo y abierto
+
+Carpeta app: Contiene el código principal de la aplicación.
+Carpeta src: Aquí van los archivos fuente de tu aplicación.
+Carpeta models: Almacena los modelos de datos de tu aplicación si es necesario.
+Carpeta controllers: Coloca controladores que manejen las solicitudes y respuestas.
+Carpeta services: Guarda lógica de negocio y servicios.
+Carpeta utils: Contiene utilidades y funciones comunes.
+Carpeta config: Almacena archivos de configuración.
+Carpeta tests: Contiene pruebas unitarias y de integración.
+Carpeta docs: Si es necesario, aquí puedes colocar documentación detallada.
+Carpeta static: Para archivos estáticos como imágenes, hojas de estilo y JavaScript en una aplicación web.
+Carpeta templates: Útil para aplicaciones web que usan plantillas HTML.
+Carpeta database: Donde se maneja la configuración y migraciones de la base de datos.
+Carpeta logs: Para almacenar registros de la aplicación si es necesario.
+Carpeta config: Configuración de la aplicación, como variables de entorno.
+Carpeta scripts: Para scripts de automatización, como la construcción de Docker.
 
 ## Contribución
 Si deseas contribuir a este proyecto, sigue estas directrices:
@@ -104,7 +111,7 @@ docker run --rm app:1.0
 ## Ejecutar compose para no instalar la carpeta env y que solo este dentro de los contenedores
 docker-compose up -d
 Con esto lo ejecutarias siempre y cuando el contenedor se llame app
-docker-compose exec app python src/program.py
+docker-compose exec app python app/program.py
 
 
 ## Docker swarm

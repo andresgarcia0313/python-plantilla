@@ -2,11 +2,13 @@ version: '3.9'
 services:
   app:
     build:
-      context: .
+      context: ./program
       dockerfile: Containerfile
     volumes:
-      - ./src:/app/src
-    # command mantendrá el contenedor en ejecución y no se cerrará después de que se inicie
-    command: tail -f /dev/null
-    # docker-compose exec app python src/program.py
+      - ./program/app:/software/app
+    # command mantendrá el contenedor en ejecución y no se cerrará después de 
+    # que se inicie esto es perfecto para desarrollar dentro del contenedor 
+    # con vscode
+    command: python app/program.py & tail -f /dev/null
+    # docker-compose exec app python app/program.py
 

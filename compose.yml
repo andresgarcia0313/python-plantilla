@@ -9,6 +9,6 @@ services:
     # command mantendrá el contenedor en ejecución y no se cerrará después de 
     # que se inicie esto es perfecto para desarrollar dentro del contenedor 
     # con vscode
-    command: python app/program.py & tail -f /dev/null
+    command: sh -c "python app/program.py && tail -f /dev/null"
     # docker-compose exec app python app/program.py
 
